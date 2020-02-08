@@ -11,17 +11,10 @@ Based on work from:
 
 ## Getting Started
 
-1. Change your shell to `zsh` through macOS, and run the first script to do the machine setup:
+1. Run the script to do the machine setup:
 
 ```
-chsh -s /bin/zsh
 ./start.sh
-```
-
-2. Then run the script that installs everything:
-
-```
-./go.sh
 ```
 
 ## What does this install?
@@ -31,7 +24,7 @@ chsh -s /bin/zsh
 * Sets hostname
 * oh-my-zsh
 * Homebrew
-* Ruby 2.6.5
+* Ruby 2.7.0
 * MariaDB 10.2
 * PostgreSQL
 * Creates `~/Projects` folder
@@ -39,63 +32,66 @@ chsh -s /bin/zsh
 
 ### Applications
 
-* 1Password
-* Alfred
-* Balsamiq
-* ClipGrab
-* Color Picker
-* Command Line Tools for Xcode
-* Dropbox
-* Fantastical
-* Firefox
-* Google Chrome
-* Keep It
-* Keynote
-* last.fm
-* Leech
-* MacDown
-* Microsoft Word
-* Microsoft PowerPoint
-* Microsoft Excel
-* Muzzle
-* Numbers
-* OmniFocus
-* OmniGraffle
-* OneDrive
-* Pages
-* Philips Hue Sync
-* Reeder
-* Sequel Pro
-* Skype for Business
-* Slack
-* SONOS Controller
-* TextMate
-* The Unarchiver
-* Transmit
-* Trello
-* Tweetbot
-* Ulysses
-* UniFi Network Controller
-* Viscosity
-* VLC
-* Zoom
 
-### Utilities
-
+* 1password
+* alfred
 * asdf
 * chruby
+* Color Picker
+* Command Line Tools for Xcode
+* coreutils
+* firefox
+* font-cascadia
+* font-fira-code
+* font-fontawesome
+* fzf
+* git
+* google-chrome
+* gpg
+* graphicsmagick
+* heroku
 * hugo
-* mas-cli
+* iterm2
+* jetbrains-toolbox
+* Keynote
+* macdown
+* mariadb@10.2
+* mas
+* Microsoft Excel
+* Microsoft PowerPoint
+* Microsoft Word
+* neovim
+* ngrok
+* node
+* Numbers
+* Pages
+* postgresql
+* rectangle
+* redis
 * ruby-install
+* sequel-pro
 * shellcheck
+* slack
+* ssh-copy-id
+* suspicious-package
+* the-unarchiver
+* tmux
+* Trello
+* viscosity
+* visual-studio-code
 * wget
+* yarn
+* zoomus
+* zsh-autosuggestions
+* zsh-syntax-highlighting
+
+### Utilities
 
 ## Customisation
 
 If you want to fork this, replace with your own name and email address in:
 
 * `dotfiles/gitconfig`
-* `dotfiles/tm_properties`
 
 ## Can has?
 

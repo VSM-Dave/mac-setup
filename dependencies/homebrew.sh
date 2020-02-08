@@ -26,44 +26,46 @@ packages=(
   chruby
   coreutils
   fzf
+  git
   gpg
-  postgresql
-  ruby-install
-  redis
   graphicsmagick
-  mariadb@10.2
-  shellcheck
+  heroku
   hugo
+  mariadb@10.2
   mas
+  neovim
+  node
+  postgresql
+  redis
+  ruby-install
+  shellcheck
+  ssh-copy-id
+  tmux
+  wget
+  yarn
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 casks=(
-  clipgrab
+  1password
+  alfred
+  firefox
+  font-cascadia
+  font-fira-code
   font-fontawesome
-  font-open-sans
-  font-inconsolata
-  font-nunito
-  font-source-code-pro
-  font-source-sans-pro
-  epubquicklook
-  leech
-  muzzle
-  mysides
-  philips-hue-sync
-  qlcolorcode
-  qlmarkdown
-  qlprettypatch
-  qlstephen
-  quicklook-csv
-  quicklook-json
-  scriptql
-  sonos
+  google-chrome
+  iterm2
+  jetbrains-toolbox
+  macdown
+  ngrok
+  rectangle
+  sequel-pro
+  slack
   suspicious-package
-  transmit
-  ubiquiti-unifi-controller
+  the-unarchiver
   viscosity
-  vlc
-  webpquicklook
+  visual-studio-code
   zoomus
 )
 

@@ -10,7 +10,7 @@ sudo defaults write /var/db/SystemPolicy-prefs.plist enabled -string no
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
 # Always show scrollbars
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+#defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -42,8 +42,11 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 # Setting trackpad & mouse speed to a reasonable number
-defaults write -g com.apple.trackpad.scaling 2
+defaults write -g com.apple.trackpad.scaling 2.5
 defaults write -g com.apple.mouse.scaling 2.5
+
+# Setting trackpad for tap click
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/London" > /dev/null
@@ -132,8 +135,8 @@ chflags nohidden ~/Library
 
 # Add ~/ and ~/Projects directories to Finder sidebar
 mkdir -p ~/Projects
-mysides add James file:///Users/james
-mysides add Projects file:///Users/james/Projects
+mysides add David file:///Users/david
+mysides add Projects file:///Users/david/Projects
 
 # Restart Finder
 killall Finder
@@ -142,8 +145,8 @@ killall Finder
 # Dock
 # -----------
 
-# Set the icon size of Dock items to 48 pixels
-defaults write com.apple.dock tilesize -int 48
+# Set the icon size of Dock items to 38 pixels
+defaults write com.apple.dock tilesize -int 38
 
 # Minimize windows into their application’s icon
 defaults write com.apple.dock minimize-to-application -bool true
@@ -165,10 +168,6 @@ defaults write com.apple.dock mru-spaces -bool false
 
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
-
-# Bottom left screen corner is a hot corner to start screen saver
-defaults write com.apple.dock wvous-bl-corner -int 5
-defaults write com.apple.dock wvous-bl-modifier -int 0
 
 # Restart Dock
 killall Dock
@@ -259,3 +258,11 @@ defaults write com.apple.commerce AutoUpdateRestartRequired -bool true
 
 # Prevent Photos from opening automatically when devices are plugged in
 defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+
+# -----------
+# Touchbar (Control Strip)
+# -----------
+defaults write ~/Library/Preferences/com.apple.controlstrip FullCustomized '(com.apple.system.group.brightness, com.apple.system.group.keyboard-brightness, NSTouchBarItemIdentifierFlexibleSpace, com.apple.system.airplay, com.apple.system.group.media, com.apple.system.group.volume )'
+defaults write ~/Library/Preferences/com.apple.controlstrip MiniCustomized '(com.apple.system.screen-lock, com.apple.system.screencapture, com.apple.system.volume, com.apple.system.mute )'
+
+killall ControlStrip

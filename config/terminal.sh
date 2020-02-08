@@ -39,7 +39,7 @@ tell application "Terminal"
 end tell
 EOD
 
-  osascript -e "tell application \"Terminal\" to set the font name of window 1 to \"Monaco\""
+  osascript -e "tell application \"Terminal\" to set the font name of window 1 to \"Cascadia Code\""
   osascript -e "tell application \"Terminal\" to set the font size of window 1 to \"15\""
 
   rm IR_Black.terminal
