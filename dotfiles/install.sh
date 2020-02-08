@@ -5,7 +5,7 @@ echo "--colour" >> ~/.rspec
 # TextMate everywhere
 export VISUAL="nvim -w"
 export EDITOR="nvim -w"
-mkdir ~/.zsh_functions
+mkdir -p ~/.zsh_functions
 
 cp dotfiles/gemrc ~/.gemrc
 cp dotfiles/gitattributes ~/.gitattributes

@@ -46,7 +46,7 @@ defaults write -g com.apple.trackpad.scaling 2.5
 defaults write -g com.apple.mouse.scaling 2.5
 
 # Setting trackpad for tap click
-defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write -g com.apple.AppleMultitouchTrackpad Clicking -bool true
 
 # Set the timezone; see `sudo systemsetup -listtimezones` for other values
 sudo systemsetup -settimezone "Europe/London" > /dev/null
