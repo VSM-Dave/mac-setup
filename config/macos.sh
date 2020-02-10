@@ -135,11 +135,9 @@ chflags nohidden ~/Library
 
 # Add ~/ and ~/Projects directories to Finder sidebar
 mkdir -p ~/Projects
-mysides add David file:///Users/david
-mysides add Projects file:///Users/david/Projects
-
-# Restart Finder
-killall Finder
+# FIXME: mysides does not seem to be supported
+#mysides add David file:///Users/david
+#mysides add Projects file:///Users/david/Projects
 
 # -----------
 # Dock
@@ -169,8 +167,6 @@ defaults write com.apple.dock mru-spaces -bool false
 # Make Dock icons of hidden applications translucent
 defaults write com.apple.dock showhidden -bool true
 
-# Restart Dock
-killall Dock
 
 # -----------
 # Safari
@@ -265,4 +261,26 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 defaults write ~/Library/Preferences/com.apple.controlstrip FullCustomized '(com.apple.system.group.brightness, com.apple.system.group.keyboard-brightness, NSTouchBarItemIdentifierFlexibleSpace, com.apple.system.airplay, com.apple.system.group.media, com.apple.system.group.volume )'
 defaults write ~/Library/Preferences/com.apple.controlstrip MiniCustomized '(com.apple.system.screen-lock, com.apple.system.screencapture, com.apple.system.volume, com.apple.system.mute )'
 
-killall ControlStrip
+
+# https://gist.github.com/brandonb927/3195465
+###############################################################################
+# Kill affected applications
+###############################################################################
+
+echo ""
+echo "Done!"
+echo ""
+echo ""
+echo "################################################################################"
+echo ""
+echo ""
+echo "Note that some of these changes require a logout/restart to take effect."
+echo "Killing some open applications in order to take effect."
+echo ""
+
+find ~/Library/Application\ Support/Dock -name "*.db" -maxdepth 1 -delete
+for app in "Activity Monitor" "Address Book" "Calendar" "Contacts" "ControlStrip" "cfprefsd" \
+  "Dock" "Finder" "Mail" "Messages" "Safari" "SystemUIServer" \
+  "Terminal"; do
+  killall "${app}" > /dev/null 2>&1
+done
