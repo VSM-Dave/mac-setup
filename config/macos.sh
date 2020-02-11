@@ -37,9 +37,12 @@ defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 # Increase sound quality for Bluetooth headphones/headsets
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
 
+# Show bluetooth icon in status bar
+defaults write -g com.apple.menuextra.bluetooth -bool true
+
 # Set a blazingly fast keyboard repeat rate
 defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain InitialKeyRepeat -int 25
 
 # Setting trackpad & mouse speed to a reasonable number
 defaults write -g com.apple.trackpad.scaling 2.5

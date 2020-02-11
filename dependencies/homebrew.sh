@@ -43,8 +43,6 @@ packages=(
   tmux
   wget
   yarn
-  zsh-autosuggestions
-  zsh-syntax-highlighting
 )
 
 casks=(
