@@ -48,6 +48,7 @@ packages=(
 casks=(
   1password
   alfred
+  discord
   firefox
   font-cascadia
   font-fira-code
