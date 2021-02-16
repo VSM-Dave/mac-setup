@@ -1,0 +1,3 @@
+clean_code() {
+    standardrb --fix && i18n-tasks normalize
+}

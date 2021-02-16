@@ -109,15 +109,9 @@ source $ZSH/oh-my-zsh.sh
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 
-asdf_dir="/usr/local/opt/asdf"
-if [[ -d $asdf_dir ]]; then
-  # Load up asdf
-  source $asdf_dir/asdf.sh
-fi
-
-export PATH="/usr/local/opt/mariadb@10.2/bin:$PATH"
-
 # add ~/.zsh_functions to fpath, and then lazy autoload
 # every file in there as a function
 fpath=( ~/.zsh_functions "${fpath[@]}" )
-autoload -Uz rails_new
+autoload -Uz jumpstart_new
+autoload -Uz clean_code
+autoload -Uz update_project

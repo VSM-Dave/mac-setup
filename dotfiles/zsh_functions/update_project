@@ -1,0 +1,3 @@
+update_project() {
+    bundle install && yarn install && bundle exec rails db:migrate
+}

@@ -18,23 +18,16 @@ sh "./dependencies/oh-my-zsh.sh"
 echo "--- Installing configuration files ---"
 sh "./dotfiles/install.sh"
 
-# Setup preferences
-echo "--- Installing Preferences ---"
-sh "./preferences/install.sh"
-
-
-echo "--- Installing applications from the Mac App Store ---"
-sh "./apps/appstore.sh"
-
 
 # Development environment setup
 echo "--- Creating ~/Projects folder ---"
 mkdir ~/Projects >/dev/null 2>&1
 
+
 echo "--- Install Ruby ---"
-if ruby -v | grep "2.7.0" >/dev/null 2>&1 ; then
-  echo "Ruby 2.7.0 is already installed"
+if ruby -v | grep "3.0.0" >/dev/null 2>&1 ; then
+  echo "Ruby 3.0.0 is already installed"
 else
-  echo "Ruby 2.7.0 is not installed, installing..."
-  ruby-install ruby-2.7.0
+  echo "Ruby 3.0.0 is not installed, installing..."
+  ruby-install ruby-3.0.0
 fi
